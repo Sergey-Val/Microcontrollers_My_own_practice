@@ -1,7 +1,7 @@
 /*
  * Tachometer _Additional program for Atmega8.c
  *
- * Created: 14.05.2023 14:16:55
+ * Created: 14.05.2024 14:16:55
  * Author : Сергей
  */ 
 
