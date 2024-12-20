@@ -1,7 +1,7 @@
 /*
  * Tachometer with Atmega64.c
  *
- * Created: 03.05.2023 20:27:22
+ * Created: 03.05.2024 12:27:22
  * Author : Сергей
  */ 
 
