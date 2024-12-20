@@ -1,7 +1,7 @@
 /*
  * Detector DS18B20 (MASTER).c
  *
- * Created: 01.10.2023 13:48:18
+ * Created: 01.10.2024 13:48:18
  * Author : Сергей
  */ 
 
