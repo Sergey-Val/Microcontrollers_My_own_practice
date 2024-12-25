@@ -36,7 +36,7 @@ int main(void)
 	  if (~PINB & (1<<0))
 	  {
 		SendByte(0b00000001, COMMAND); //Clear the LCD
-		_delay_ms(2); //In the datasheet it is at least recommended 1.58 ms
+		_delay_ms(2); //In the datasheet it is recommended at least 1.58 ms
 
 		String("DANGER!");
 		PORTD |= (1<<1);
