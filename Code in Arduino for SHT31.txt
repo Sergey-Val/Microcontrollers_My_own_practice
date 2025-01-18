@@ -1,0 +1,49 @@
+#include <Arduino.h>
+#include <Wire.h>
+#include <LiquidCrystal.h>
+#include "SHT31.h"
+
+SHT31 sensor_sht31 = SHT31();
+
+float temp = sensor_sht31.getTemperature();
+float humid = sensor_sht31.getHumidity();
+
+LiquidCrystal lcd(1,2,3,4,5,6); //В этом классе отсутствует конструктор по умолчанию, поэтому приходится заполнять конструктор с минимальным набором параметров.
+
+void setup()
+{
+  Serial.begin(9600);
+  
+  if (!sensor_sht31.begin())
+  {
+    Serial.println("SHT31 is not found");
+    while(1) delay(1);
+  }
+}
+
+void loop()
+{
+  if (isnan(temp))
+  {
+    Serial.println("Alas! Failure to read the temperature");
+  }
+  else
+  {
+    Serial.print("Temperature *C = ");
+    Serial.print(temp);
+    Serial.print("\t\t");
+  }
+
+  if (isnan(humid))
+  {
+    Serial.println("Bad luck reading the humidity");
+  }
+  else
+  {
+    Serial.print("Humidity = ");
+    Serial.print(humid);
+    Serial.print("%");
+  }
+  delay(1000);
+  lcd.clear();
+}
